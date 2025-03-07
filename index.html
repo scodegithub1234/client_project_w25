@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Student Success Portal</title>
 </head>
 <body>
 
     <header>
-    <a href = "">Skip to Main Content</a>
-        <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
+        <div class="skip"><a href="#main">Skip to Main Content</a></div>
         <nav>
+            <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">  
             <ul>
                 <li><a href = "index.html">Home</a></li>
                 <li><a href = "page_1.html">Online Python Resources</a></li>
@@ -18,11 +20,11 @@
                 <li><a href = "page_3.html">UMSI Tutoring Resources</a></li>
             </ul>
         </nav>
-        <h1>Student Success Portal</h1>
+        <h1 class="indexheader">Student Success Portal</h1>
 
     </header>
     <main>
-        <section>
+        <section class="welcome">
             <h2>Welcome to the UM Grad Success Navigator</h2>
             <p> Your Comprehensive Guide to Resources for Graduate School Success</p>
             <p>This guide is set up to help you be successul inside and outside of the classroom and we have included the following resources throughout our site:</p>
@@ -34,7 +36,7 @@
                 <li>Contact</li>
             </ol>
         </section>
-        <section>
+        <section class="physical">
             <h2>Physical Health</h2>
             <p>Keeping your body healthy is essential for success. The University of Michigan offers numerous resources to help you stay in top physical condition:</p>
             <article>
@@ -55,7 +57,7 @@
             </article>
         </section>
         
-        <section>
+        <section class="mental">
             <h2>Mental Health</h2>
             <p>Maintaining your mental well-being is crucial for thriving in graduate school. Here are resources to support your mental health:</p>
             <article>
@@ -80,7 +82,7 @@
         </section>
 
         
-        <section id="life-outside-classroom">
+        <section class="life-outside-classroom">
             <h2>Life Outside the Classroom</h2>
             <p>Graduate school is more than just academics. It's important to cultivate a balanced life. Here are some resources to help you enjoy life outside the classroom:</p>
             
@@ -97,6 +99,6 @@
     </main>
     <footer>
         <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></p>
-        </footer>
+    </footer>
 </body>
 </html>
