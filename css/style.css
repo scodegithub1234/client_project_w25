@@ -45,13 +45,13 @@
   }
   
   header{
-    .indexheader{
+    /* .indexheader{
       background-image: url('../images/ccsiresumeworkshop.jpg');
       color: white;
     }
     .page1header{
       background-image: url('../images/python.jpg');
-    }
+    } */
     h1{
       grid-column: 1/-1;
       background-attachment: fixed;
