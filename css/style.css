@@ -19,13 +19,17 @@
     text-decoration: underline;
   }
 
-  .skip a{
+  .skip a {
     position: absolute;
     top: -40px;
+    left: 10px;
   }
 
-  .skip a:focus{
-    top: 20px; 
+  .skip a:focus {
+      top: 10px; 
+      background: #fff; 
+      padding: 10px;
+      border: 2px solid black;
   }
 
   *:focus{
