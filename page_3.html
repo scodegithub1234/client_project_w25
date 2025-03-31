@@ -23,7 +23,7 @@
         <h1>UMSI Tutoring Resources</h1>
 
     </header>
-    <main id="main">
+    <main class="page_3">
         <div>
             <h2>Welcome to UMSI Tutoring & Academic Support!</h2>
             <p>The Academic Success Team at UMSI is dedicated to supporting students inside and outside of the classroom. This site is dedicated to connecting students to tutoring and academic support resources. Resources covered on this site include:</p>
@@ -38,7 +38,41 @@
                 <li>Link to the Peer-to-Peer Tutor Directory</li>
             </ul>
         </div>
+
         <div>
+            <h2>Get Help</h2>
+            <p>Please fill out the form below to tell us about your year, major, and the subject you're seeking help with. We'll connect you to the right resources!</p>
+
+            <form id="help-form">
+
+                <label for="major">Your Major:</label>
+                <input type="text" id="major" name="major" required><br><br>
+
+                <label for="subject">Subject of Help Needed:</label>
+                <select id="subject" name="subject" required>
+                    <option value="Math">Math</option>
+                    <option value="Programming">Programming</option>
+                </select><br><br>
+
+                <button type="submit">Submit</button>
+            </form>
+
+            <h3>Your Submitted Information:</h3>
+            <p id="submitted-info"></p>
+        </div>
+
+        <div id="math-resources" style="display:none;">
+            <h2>UMSI Math Peer Tutoring</h2>
+            <p>UMSI Math Peer Tutoring Information Available for the below subject areas:</p>
+            <ul>
+                <li>Linear algebra</li>
+                <li>Statistics</li>
+                <li>General Math related course support</li>
+                <li>Please see the tutor biographies at <a href="https://sites.google.com/umich.edu/umsitutoring/umsi-math-tutoring">UMSI Math Peer Tutoring</a> for course-specific support.</li>
+            </ul>
+        </div>
+
+        <div id="programming-resources" style="display:none;">
             <h2>UMSI Programming Peer Tutoring</h2>
             <p>UMSI Programming Peer Tutoring Information Available for the below courses:</p>
             <ul>
@@ -51,17 +85,7 @@
             <p>If you have questions regarding the Programming Peer Tutoring, you can email Professor Anthony Whyte at arwhyte@umich.edu  and/or the UMSI Academic Success Team at umsi.academicsuccess@umich.edu for support. </p>
             <p>For information about each programming tutor available in the UMSI department, please navigate to <a href="https://sites.google.com/umich.edu/umsitutoring/umsi-programming-tutoring">UMSI Programming Peer Tutoring</a>. </p>
         </div>
-        <div>
-            <h2>UMSI Math Peer Tutoring</h2>
-            <p>UMSI Math Peer Tutoring Information Available for the below subject areas:</p>
-            <ul>
-                <li>Linear algebra</li>
-                <li>Statistics</li>
-                <li>General Math related course support</li>
-                <li>Please see the tutor biographies at <a href="https://sites.google.com/umich.edu/umsitutoring/umsi-math-tutoring">UMSI Math Peer Tutoring</a> for course-specific support.</li>
-            </ul>
-            <p>If you have questions regarding Math Peer Tutoring, you can email the UMSI Academic Success Team at umsi.academicsuccess@umich.edu for support and/or if you are interested in applying to be a Math Peer Tutor. </p>
-        </div>
+
         <div>
             <h2>FAQ's: UMSI Peer Tutoring Program</h2>
             <ul>
@@ -118,8 +142,30 @@
     </main>
 
     <footer>
-        <p>University of Michigan School of Information <br/>
+        <p>University of Michigan School of Information <span id="year"></span><br/>
             &copy; MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></p>
+            <script>
+                document.getElementById("year").innerHTML = new Date().getFullYear();
+                //form submission
+                document.getElementById("help-form").addEventListener("submit", function(event) {
+                event.preventDefault(); 
+
+                var major = document.getElementById("major").value;
+                var subject = document.getElementById("subject").value;
+
+                document.getElementById("submitted-info").innerHTML = 
+                    "Major: " + major + "<br>" +
+                    "Subject: " + subject;
+
+                if (subject === "Math") {
+                    document.getElementById("math-resources").style.display = "block";
+                    document.getElementById("programming-resources").style.display = "none";
+                } else if (subject === "Programming") {
+                    document.getElementById("programming-resources").style.display = "block";
+                    document.getElementById("math-resources").style.display = "none";
+                }
+            });
+                </script>
     </footer>
     
 </body>

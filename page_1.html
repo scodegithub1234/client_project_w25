@@ -112,8 +112,11 @@
         </div>
     </main>
     <footer>
-        <p>University of Michigan School of Information <br/>
+        <p>University of Michigan School of Information <span id="year"></span><br/>
             &copy; MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></p>
+            <script>
+                document.getElementById("year").innerHTML = new Date().getFullYear();
+                </script>
     </footer>
     
 </body>

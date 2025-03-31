@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Oops! Something Went Wrong...</h1>
+    </header>
+    <section class="error-container">
+        <div class="error-message">
+            <h2>404</h2>
+            <p>It seems the page you're looking for doesn't exist.</p>
+            <p>Don't worry, though – let's get you back on track!</p>
+            <div class="404">
+                <a href="index.html" class="button">Go Home</a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>University of Michigan School of Information <span id="year"></span><br/>
+            &copy; MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></p>
+            <script>
+                document.getElementById("year").innerHTML = new Date().getFullYear();
+                </script>
+    </footer>
+</body>
+</html>

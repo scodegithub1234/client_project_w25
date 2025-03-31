@@ -23,12 +23,7 @@
         <h1>Basic Student Needs</h1>
 
     </header>
-    <main id="main">
-        <div>
-            <h2>Basic Needs</h2>
-            <p>Striving for fair and equitable access to food and other basic resources</p>
-            <img src="images/Student_life.png" alt="A logo of the University of Michigan student life focus.">
-        </div>
+    <main class="page_2">
         <div>
             <h2>About</h2>
             <p>We believe in fair and equitable access to food and other basic resources. Because when each of us has what we need, our community is stronger and our students are more successful.</p>
@@ -64,8 +59,11 @@
         </div>
     </main>
     <footer>
-        <p>University of Michigan School of Information <br/>
+        <p>University of Michigan School of Information <span id="year"></span><br/>
             &copy; MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></p>
+            <script>
+                document.getElementById("year").innerHTML = new Date().getFullYear();
+                </script>
     </footer>
     
 </body>

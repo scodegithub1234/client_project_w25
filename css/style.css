@@ -1,130 +1,298 @@
  /* overall */
-  html{
-    scroll-behavior: smooth;
-  }
-  
-  body{
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background-color: white;
+  font-size: 1rem; /* Fluid font size */
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+nav a:hover,
+nav a:focus {
+  text-decoration: underline;
+}
+
+.skip a {
+  position: absolute;
+  top: -40px;
+  left: 10px;
+}
+
+.skip a:focus {
+  top: 10px;
+  background: #fff;
+  padding: 10px;
+  border: 2px solid black;
+}
+
+*:focus {
+  border: 2px solid;
+}
+
+h1 {
+  font-size: 3rem; /* Fluid font size */
+  line-height: 1;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem; /* Fluid font size */
+  line-height: 1.5;
+}
+
+header {
+  width: 100%;
+  padding: 1rem 0;
+  display: grid;
+  justify-items: center;
+  background: #00274c;
+  color: white;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  align-items: center;
+  justify-items: center;
+  background-color: #ffcb05;
+  padding: 1.5rem;
+}
+
+nav img {
+  width: 100px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 10px;
+}
+
+nav li {
+  padding: 10px;
+  border: #000000 2px solid;
+  border-radius: 7px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #00274c;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  display: inline-block;
+  border-radius: 5px;
+
+}
+
+nav a:hover,
+nav a:focus {
+  background: #00274c;
+  color: white;
+}
+
+/* Indicate Current Page in Navigation */
+nav a.active {
+  font-weight: bold;
+  text-decoration: underline;
+  background: #00274c;
+  color: white;
+}
+
+section {
+  background-color: rgb(255, 203, 5);
+  text-align: center;
+  border-left: 10px solid #00274c;
+  border-right: 10px solid #00274c;
+  font-size: 1.5rem; /* Fluid font size */
+}
+
+section h2 {
+  color: #00274c;
+  border-top: 10px solid #00274c;
+  border-bottom: 10px solid #00274c;
+  padding: 2rem;
+}
+
+section img {
+  width: 70%; /* Fluid width */
+  max-width: 350px;
+}
+
+p,
+ol,
+li {
+  padding: 2rem;
+  color: #00274c;
+}
+
+p {
+  font-weight: bold;
+}
+
+div {
+  text-align: center;
+}
+
+div img {
+  max-width: 80%;
+  padding: 5px;
+  border: 5px #00274c ridge;
+}
+
+.page_1 {
+  font-size: 1.25rem; /* Fluid font size */
+  font-weight: bold;
+  padding: 2rem;
+}
+
+footer {
+  display: grid;
+  width: 100%;
+  grid-column: 1/-1;
+  background: linear-gradient(to right, #000000, #0000ff 25%, #0066ff 70%, #000000);
+  text-align: center;
+  p{color: white}
+  padding: 2rem 0;
+}
+
+footer a {
+  color: #ffcb05;
+  text-decoration: underline;
+}
+
+.page_1{
+
+  ul {
     display: grid;
-    background-color: white;
-    font-size: 18px;
-    line-height: 1.15;
-    margin: 0;
-    padding: 0;
-    justify-items: center;
-    align-content: center;
-    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 
-  nav a:hover, nav a:focus{
-    text-decoration: underline;
-  }
-
-  .skip a {
-    position: absolute;
-    top: -40px;
-    left: 10px;
-  }
-
-  .skip a:focus {
-      top: 10px; 
-      background: #fff; 
-      padding: 10px;
-      border: 2px solid black;
-  }
-
-  *:focus{
-    border: 2px solid;
-  }
-  
-  h1{
-    font-size: 50px;
-    line-height: 1;
-    padding: 50px 0;
-    text-align: center;
-  }
-  
-  h2{
-    font-size: 32px;
-    line-height: 1.5;
-  }
-  
-  header{
-    /* .indexheader{
-      background-image: url('../images/ccsiresumeworkshop.jpg');
-      color: white;
-    }
-    .page1header{
-      background-image: url('../images/python.jpg');
-    } */
-    h1{
-      grid-column: 1/-1;
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-    img{  
-      width: 80px;
-    }
-    li{
-      border: black solid 2px;
-    }
-  }
-
-  section{
-    background-color: rgb(255, 203, 5);
-    text-align: center;
-    border-left: 10px solid #00274c;
-    border-right: 10px solid #00274c;
-    font-size: 30px;
-    h2{
-      grid-column: 1/-1;
-      color: #00274c;
-      border-top: 10px solid #00274c;
-      border-bottom: 10px solid #00274c;
-      padding: 30px;
-    }
-    img{
-      width: 350px;
-    }
-  }
-
-  p, ol, li{
-    padding: 30px;
-    color:#00274c;
+  ul li {
+      background-color: white; 
+      border: 1px solid #003366;
+      border-radius: 8px; 
+      padding: 10px; 
+      justify-items: center;
+      justify-content: center;
+      
     
+      text-align: center; 
+      list-style-type: none;
+  }
+  ul li ul{
+    padding: 0px;
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 1fr;
   }
 
-  p{
-    font-weight: bold;
-  }
-  
-  nav{
-    background-color: rgb(255, 203, 5);
-    padding: 25px; 
-    text-align: center;
-    font-size: 30px;
-    color: #00274c;
-  }
-  
-  div{
-    text-align: center;
-    img{
-      max-width: 300px;
-      padding: 5px;
-      border: 5px #00274c ridge;
-    }
+  ul li:last-child {
+    grid-column: span 2; 
   }
 
-  .page_1{
-    font-size: 20px;
-    font-weight: bold;
+
+  ul li a {
+      font-size: 1.5em; 
+      color: #003366;
+      text-decoration: none; 
+      justify-items: center;
+      justify-content: center;
+      align-items: center;
+      transition: color 0.3s; 
+  } 
+
+  ul li a:hover {
+      color: #FFD700; 
   }
-  
-  footer{
-    background: linear-gradient(to right,#000000,#0000ff 25%,#0066ff 70%,#000000);
-    text-align: center;
-    color: white;
+    
+}
+
+.page_2{
+
+  /* Styles for Categories Section */
+  figure {
+      background: #ffffff; 
+      border: 1px solid #003366; 
+      border-radius: 8px; 
+      margin: 15px; 
+      padding: 10px;
+      text-align: center; 
   }
-  
-  
+
+  figure img {
+      width: 100%;
+      height: auto; 
+  }
+
+  figcaption {
+      color: #003366; 
+      font-size: 1.1em; 
+  }
+}
+
+.page_3{
+  padding: 20px; /* Padding for the main area */
+  margin: 0 auto; /* Center main content */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+
+  /* Section Headers */
+  h1 {
+      font-size: 2.5em;
+      margin: 20px 0; /* Space around header */
+  }
+
+  /* Paragraphs */
+  p {
+      margin-bottom: 15px; /* Space below paragraphs */
+  }
+
+  /* Styling list items within the main content */
+  ul {
+      list-style-type: none; /* Remove bullet points */
+  }
+
+  li {
+      background-color: #ffffff; /* White background for items */
+      border: 1px solid #003366; /* Blue border */
+      border-radius: 8px; /* Rounded corners */
+      padding: 10px; /* Internal padding */
+      margin-bottom: 15px; /* Space between list items */
+      text-align: left; /* Left align text */
+  }
+
+  figure {
+      display: flex; /* Flexbox for image and caption */
+      flex-direction: column; /* Stack image on top of caption */
+      justify-content: center; /* Center items */
+      align-items: center; /* Center items */
+  }
+
+  figure img {
+      max-width: 100%; /* Responsive image */
+      height: auto; /* Maintain aspect ratio */
+      border-radius: 8px; /* Rounded corners for images */
+  }
+
+  figcaption {
+      color: #003366; /* Blue text for captions */
+      font-weight: bold;
+  }
+}
